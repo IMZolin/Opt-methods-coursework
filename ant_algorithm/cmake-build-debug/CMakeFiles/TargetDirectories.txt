@@ -1,0 +1,3 @@
+C:/Users/zolin/University/Optimization_methods/coursework/ant_algorithm/cmake-build-debug/CMakeFiles/ant_algorithm.dir
+C:/Users/zolin/University/Optimization_methods/coursework/ant_algorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/zolin/University/Optimization_methods/coursework/ant_algorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
