@@ -1,7 +1,5 @@
 import math
 import random
-import matplotlib.pyplot as plt
-
 
 def cal_dis(dis, path):
     # calculate the length of the path
@@ -27,7 +25,6 @@ def nearest_neighbor_heuristic(distance):
     length += distance[pre_node][first_node]
     return length
 
-
 def roulette(pooling):
     sum_num = sum(pooling)
     temp_num = random.random()
@@ -37,7 +34,6 @@ def roulette(pooling):
         if probability >= temp_num:
             return i
     return len(pooling)
-
 
 def choose_next_city(dis, tau, beta, q0, ant_path):
     # Choose the next city
@@ -124,23 +120,6 @@ def main(coord_x, coord_y, pop, iter, alpha, beta, rho, q0):
 
     # Step 3. Sort the results
     x = [i for i in range(iter)]
-    plt.figure()
-    plt.plot(x, iter_best, linewidth=2, color='blue')
-    plt.title('Convergence curve')
-    plt.xlabel('Iterations')
-    plt.ylabel('Best so-far value')
-    plt.show()
-
-    plt.figure()
-    plt.scatter(coord_x, coord_y, color='black')
-    for i in range(len(best_path) - 1):
-        temp_x = [coord_x[best_path[i]], coord_x[best_path[i + 1]]]
-        temp_y = [coord_y[best_path[i]], coord_y[best_path[i + 1]]]
-        plt.plot(temp_x, temp_y, color='blue')
-    plt.title('The best result')
-    plt.xlabel('x coordination')
-    plt.ylabel('y coordination')
-    plt.show()
 
     return {'Best tour': best_path, 'Shortest length': best_length}
 
